@@ -20,7 +20,7 @@ powdt[i,j-1]<-parse_number(pfeb_d[i,j])
 }}
 ##add names to columns of the data frame
 names(powdt)<-c("date_time",names(pfeb_d[3:9]))
-##plot first on screen, then copy to pdf
+##plot first on screen, then copy to png
 plot(1:nrow(powdt),powdt$Sub_metering_1,type="n",ylab="Energy sub metering",xlab="",xaxt="n")
 points(1:nrow(powdt),powdt$Sub_metering_1,type="l")
 points(1:nrow(powdt),powdt$Sub_metering_2,type="l",col="red")
