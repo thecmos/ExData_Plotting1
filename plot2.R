@@ -9,7 +9,7 @@ pfeb<-subset(read.table("household_power_consumption.txt",header=TRUE,sep=";"),a
 ##Date converted from factor to date
 pfeb_d<-mutate(pfeb,date=as.Date(dmy(as.character(Date))))
 
-##For the last three graphs I think it will be better to convert all numeric variables to numeric class and store them into the new data frame “pow”, and merge date and time in one variable
+##For the last three graphs I think it will be better to convert all numeric variables to numeric class and store them into the new data frame “powdt”, and merge date and time in one variable
 powdt<-data.frame()
 for(i in 1:nrow(pfeb_d)){
 for(j in 1:1){
