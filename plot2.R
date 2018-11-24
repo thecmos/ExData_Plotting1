@@ -20,7 +20,7 @@ powdt[i,j-1]<-parse_number(pfeb_d[i,j])
 }}
 ##add names to columns of the data frame
 names(powdt)<-c("date_time",names(pfeb_d[3:9]))
-##plot first on screen, then copy to pdf
+##plot first on screen, then copy to png
 plot(1:nrow(powdt),powdt$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="",xaxt="n")
 axis(1,at=c(0,1441,2881),labels=c("Thu","Fri","Sat"))
 dev.copy(png, file = "plot2.png", bg = "white",height=480,width=480)
