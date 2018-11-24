@@ -21,7 +21,7 @@ powdt[i,j-1]<-parse_number(pfeb_d[i,j])
 ##add names to columns of the data frame
 names(powdt)<-c("date_time",names(pfeb_d[3:9]))
 ##plot first on screen, then copy to png, all the plots created before with minor changes, like avoiding borderline on legend box
-##Prepare the plot device for four graphs, tow rows and two columns
+##Prepare the plot device for four graphs, two rows and two columns
 par(mfrow=c(2,2))
 ##Plot the four graphs, one by one, by rows
 plot(1:nrow(powdt),powdt$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="",xaxt="n")
